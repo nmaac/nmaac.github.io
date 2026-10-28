@@ -1,21 +1,81 @@
 
 <!doctype html>
 <style>
-
-html {
-    display: table;
-    margin: auto;
-    padding-left: 20%;
-    padding-right: 20%;
+  html {
     font-family: 'Work Sans', sans-serif;
-}
-
-body {
-    display: table-cell;
-    vertical-align: middle;
+  }
+  body {
     font-family: 'Work Sans', sans-serif;
-}
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  #w {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 5%;  
+  }
+  body {
+    font-size: clamp(14px, 2.5vw, 16px);
+    line-height: 1.6;
+  }
+  h2 { font-size: clamp(20px, 5vw, 28px); }
+  h3 { font-size: clamp(17px, 4vw, 22px); }
+  h4 { font-size: clamp(14px, 3vw, 17px); }
+
+
+  .clearfix {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 40px 0;
+    flex-wrap: wrap;         
+  }
+
+  #photo {
+    flex: 0 0 auto;
+    width: 200px;             
+    max-width: 40vw;      
+    overflow: hidden;
+    border-radius: 8px;
+  }
+ 
+  #photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+ 
+  #info {
+    flex: 1;
+    min-width: 200px;        
+  }
+
+
+  @media (max-width: 600px) {
+    #w {
+      padding: 16px 4%;
+    }
+    .clearfix {
+      flex-direction: column;  
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+    }
+    #photo {
+      width: 150px;
+      max-width: 50vw;
+    }
+  }
+
+
+  p, a, span {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 </style>
+
+
 
 <html lang="en">
     
@@ -40,38 +100,22 @@ body {
     
     <body style="background-color:#ffffff;">
         <div id="w" itemscope itemtype="http://schema.org/Person">
-            <header class="clearfix" style="display: flex; align-items: stretch; margin: 40px 0px 0px 0;">
-
-                <!-- photo left -->
-                <div id="photo" style="margin: 20px 50px 0px 0; overflow: hidden; position: relative; width: 100%; max-width: 300px;">
-                    <img src="head.jpg" alt="photo" style="position: absolute; width: auto; height: 100%; left: 50%; transform: translateX(-50%);" itemprop="image" /> </div>
-
-                <!-- info right -->
-                <div id="info">
-                    <h2>
-                        <span itemprop="name">Ningning MA (马宁宁)</span></h2>
-                    <h4>
-                        <span itemprop="jobTitle">Xiaomi EV Autonomous Driving, HKUST PhD</span></h4>
-
-                    <p>
-                        <span itemprop="email">Email: mnn.thu AT gmail.com</span>
-                        <br></p>
-                    <p>
-                        <span itemprop="concat">Concat:
-                            <a href="https://scholar.google.com/citations?user=vOAzYlcAAAAJ">Google Scholar</a> |
-                            <a href="https://github.com/nmaac">Github</a> |
-                            <a href="https://www.zhihu.com/people/ningningma">Zhihu</a> |
-                            <a href="https://user-images.githubusercontent.com/5032208/116522992-5670d600-a908-11eb-8236-2f2a61385d14.png">Wechat 微信</a></span>
-                    </p>
-                    
-                    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="addressLocality">Raycom InfoTech Park,</span>
-                        <span itemprop="addressRegion">Zhongguancun,</span>
-                        <span itemprop="addressCountry">Haidian, Beijing.</span>
-                        </p>
-
-                  
-                </div>
+            <header class="clearfix">
+              <div id="photo">
+                <img src="head.jpg" alt="photo" itemprop="image" />
+              </div>
+              <div id="info">
+                <h2><span itemprop="name">Ningning MA (马宁宁)</span></h2>
+                <h4><span itemprop="jobTitle">Xiaomi EV Autonomous Driving, HKUST PhD</span></h4>
+                <p><span itemprop="email">Email: mnn.thu AT gmail.com</span></p>
+                <p>
+                  <a href="https://scholar.google.com/citations?user=vOAzYlcAAAAJ">Google Scholar</a> |
+                  <a href="https://github.com/nmaac">Github</a> |
+                  <a href="https://www.zhihu.com/people/ningningma">Zhihu</a> |
+                  <a href="https://user-images.githubusercontent.com/5032208/116522992-5670d600-a908-11eb-8236-2f2a61385d14.png">Wechat 微信</a>
+                </p>
+                <p>Raycom InfoTech Park, Zhongguancun, Haidian, Beijing.</p>
+              </div>
             </header>
             <p itemprop="description">
                 <font color="black">
